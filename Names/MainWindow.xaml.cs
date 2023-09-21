@@ -24,5 +24,14 @@ namespace Names
         {
             InitializeComponent();
         }
+
+        private void ButtonAddName_Click(object sender, RoutedEventArgs e)
+        {
+            if(!string.IsNullOrWhiteSpace(txtName.Text) &&!lstnames.Items.Contains(txtName.Text))
+            {
+                lstnames.Items.Add(txtName.Text);
+                txtName.Clear();
+            }
+        }
     }
 }
